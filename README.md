@@ -1,31 +1,5 @@
 # DotNet8WebApi.ODataSample2
 
-```sql
-
-CREATE TABLE Companies (
-    ID INT PRIMARY KEY IDENTITY,
-    Name NVARCHAR(100),
-    City NVARCHAR(100)
-);
-
-CREATE TABLE Products (
-    ID INT PRIMARY KEY IDENTITY,
-    Name NVARCHAR(100),
-    CompanyID INT,
-    FOREIGN KEY (CompanyID) REFERENCES Companies(ID)
-);
-
-
-```
-
-```
-
-dotnet ef dbcontext scaffold "Server=.;Database=ODataSample2;User ID=sa;Password=sasa@123;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models -c AppDbContext -f
-
-```
-
-# DotNet8WebApi.ODataSample2
-
 This project is a sample implementation of a .NET 8 Web API with OData integration, demonstrating how to build and manage data using Entity Framework Core and SQL Server.
 
 ## Features
@@ -69,3 +43,32 @@ This project is a sample implementation of a .NET 8 Web API with OData integrati
 
 - Access the API at `https://localhost:5001/odata`
 - Use OData queries to manage and filter data.
+
+
+### SQL scripts:
+
+```sql
+
+CREATE TABLE Companies (
+    ID INT PRIMARY KEY IDENTITY,
+    Name NVARCHAR(100),
+    City NVARCHAR(100)
+);
+
+CREATE TABLE Products (
+    ID INT PRIMARY KEY IDENTITY,
+    Name NVARCHAR(100),
+    CompanyID INT,
+    FOREIGN KEY (CompanyID) REFERENCES Companies(ID)
+);
+
+
+```
+
+### EFCore DB-First command in terminal:
+
+```
+
+dotnet ef dbcontext scaffold "Server=.;Database=ODataSample2;User ID=sa;Password=sasa@123;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models -c AppDbContext -f
+
+```
