@@ -44,11 +44,9 @@ This project is a sample implementation of a .NET 8 Web API with OData integrati
 - Access the API at `https://localhost:5001/odata`
 - Use OData queries to manage and filter data.
 
-
-### SQL scripts:
+### SQL Scripts
 
 ```sql
-
 CREATE TABLE Companies (
     ID INT PRIMARY KEY IDENTITY,
     Name NVARCHAR(100),
@@ -61,14 +59,11 @@ CREATE TABLE Products (
     CompanyID INT,
     FOREIGN KEY (CompanyID) REFERENCES Companies(ID)
 );
-
-
 ```
 
-### EFCore DB-First command in terminal:
+### EF Core DB-First Command
 
-```
-
+```sh
 dotnet ef dbcontext scaffold "Server=.;Database=ODataSample2;User ID=sa;Password=sasa@123;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models -c AppDbContext -f
-
 ```
+
