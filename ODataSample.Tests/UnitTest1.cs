@@ -1,4 +1,4 @@
-namespace DotNet8WebApi.ODataSample2.Tests
+namespace ODataSample.Tests
 {
     public class Tests
     {

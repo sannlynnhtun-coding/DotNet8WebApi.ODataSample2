@@ -1,10 +1,9 @@
-﻿using DotNet8WebApi.ODataSample2.Database.Models;
-using Microsoft.AspNetCore.Http;
+using ODataSample.Database.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 
-namespace DotNet8WebApi.ODataSample2.Controllers
+namespace ODataSample.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

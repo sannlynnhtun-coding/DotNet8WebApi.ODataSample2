@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace DotNet8WebApi.ODataSample2.Database.Models;
+namespace ODataSample.Database.Models;
 
 public partial class Product
 {
